@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title> لیست درخواستها </title>
+  </head>
+  <body>
+
+      <h1> درخواستها  </h1>
+        {% for vreq in Vreqlist %}
+        <h2>
+          <a href="#">{{Vreq.ReqTitle}}</a>
+          <p>{{vreq.snippet}}</p>
+          <p>{{vreq.ReqDate}}</p>
+          <p>{{vreq.ReqAdd}}</p>
+        </h2>
+        {% endfor %}
+
+  </body>
+</html>
